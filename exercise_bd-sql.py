@@ -88,6 +88,19 @@ cursor = students.cursor()
 # for clients in delete_clients:
     # print(clients)
 
+# 8)
+# cursor.execute('CREATE TABLE shopping (id INT, client_id INT, product VARCHAR(100), value REAL);')
+
+# cursor.execute('INSERT INTO shopping(id, client_id, product, value) VALUES (1,1,"Notebook",4500)')
+# cursor.execute('INSERT INTO shopping(id, client_id, product, value) VALUES (2,2,"Piano",7000)')
+# cursor.execute('INSERT INTO shopping(id, client_id, product, value) VALUES (3,3,"Cell phone",2000)')
+# cursor.execute('INSERT INTO shopping(id, client_id, product, value) VALUES (4,1,"Cell phone",1900)')
+# cursor.execute('INSERT INTO shopping(id, client_id, product, value) VALUES (5,4,"Computer",4500)')
+
+# query_shopping = cursor.execute('SELECT clients.name, shopping.product, shopping.value FROM shopping JOIN clients ON shopping.client_id = clients.id')
+# for shopping in query_shopping:
+    #print(shopping)
+
 students.commit()
 students.close()
 
