@@ -31,7 +31,7 @@ cursor = students.cursor()
 # d)
 # count_records = cursor.execute('SELECT COUNT(*) FROM students')
 # count_records = cursor.fetchone()[0]
-    # print(f"Total de alunos: {count_records}")
+    # print(f"Total students: {count_records}")
 
 # 4)
 # a)
@@ -47,12 +47,33 @@ cursor = students.cursor()
     # print(students)
 
 # 5)
-#cursor.execute('CREATE TABLE clients (id INT, name VARCHAR (100), age INT, balance FLOAT());')
-cursor.execute('INSERT INTO clients(id, name, age, balance) VALUES (1, "Ingrid", 24, 4000)')
-cursor.execute('INSERT INTO clients(id, name, age, balance) VALUES (2, "Henrique", 31, 10000)')
-cursor.execute('INSERT INTO clients(id, name, age, balance) VALUES (3, "Francisco", 80, 2000)')
-cursor.execute('INSERT INTO clients(id, name, age, balance) VALUES (4, "Maria Helena", 58, 1500)')
-cursor.execute('INSERT INTO clients(id, name, age, balance) VALUES (5, "Felipe", 35, 15000)')
+# cursor.execute('CREATE TABLE clients (id INT, name VARCHAR (100), age INT, balance FLOAT());')
+# cursor.execute('INSERT INTO clients(id, name, age, balance) VALUES (1, "Ingrid", 24, 4000)')
+# cursor.execute('INSERT INTO clients(id, name, age, balance) VALUES (2, "Henrique", 31, 10000)')
+# cursor.execute('INSERT INTO clients(id, name, age, balance) VALUES (3, "Francisco", 80, 2000)')
+# cursor.execute('INSERT INTO clients(id, name, age, balance) VALUES (4, "Maria Helena", 58, 1500)')
+# cursor.execute('INSERT INTO clients(id, name, age, balance) VALUES (5, "Felipe", 35, 15000)')
+
+# 6)
+# a)
+# name_age_clients_records = cursor.execute('SELECT name, age FROM clients WHERE age > 30')
+# for clients in name_age_clients_records:
+    # print(clients)
+
+# b)
+# average_balance_clients = cursor.execute('SELECT AVG(balance) AS average_balance FROM clients')
+# average_balance_clients = cursor.fetchone()[0]
+# print(f"Average balance: {average_balance_clients}")
+
+# c)
+# max_balance_clients = cursor.execute('SELECT name, balance FROM clients ORDER BY balance DESC LIMIT 1')
+# max_balance_clients = cursor.fetchone()[0]
+# print(f"Max balance: {max_balance_clients}")
+
+# d)
+# count_balance_clients = cursor.execute('SELECT COUNT(*) AS total_clientes FROM clients WHERE balance > 1000')
+# count_balance_clients = cursor.fetchone()[0]
+# print(f"Balance over 1000: {count_balance_clients}")
 
 students.commit()
 students.close()
