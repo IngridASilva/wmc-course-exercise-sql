@@ -75,6 +75,19 @@ cursor = students.cursor()
 # count_balance_clients = cursor.fetchone()[0]
 # print(f"Balance over 1000: {count_balance_clients}")
 
+# 7)
+# a)
+# cursor.execute('UPDATE clients SET balance = 7000 WHERE id = 1')
+# update_balance_clients = cursor.execute('SELECT * FROM clients')
+# for clients in update_balance_clients:
+    # print(clients)
+
+# b)
+# cursor.execute('DELETE FROM clients WHERE id = 5')
+# delete_clients = cursor.execute('SELECT * FROM clients')
+# for clients in delete_clients:
+    # print(clients)
+
 students.commit()
 students.close()
 
