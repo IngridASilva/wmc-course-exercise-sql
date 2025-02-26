@@ -46,6 +46,14 @@ cursor = students.cursor()
 # for students in id_delete_records:
     # print(students)
 
+# 5)
+#cursor.execute('CREATE TABLE clients (id INT, name VARCHAR (100), age INT, balance FLOAT());')
+cursor.execute('INSERT INTO clients(id, name, age, balance) VALUES (1, "Ingrid", 24, 4000)')
+cursor.execute('INSERT INTO clients(id, name, age, balance) VALUES (2, "Henrique", 31, 10000)')
+cursor.execute('INSERT INTO clients(id, name, age, balance) VALUES (3, "Francisco", 80, 2000)')
+cursor.execute('INSERT INTO clients(id, name, age, balance) VALUES (4, "Maria Helena", 58, 1500)')
+cursor.execute('INSERT INTO clients(id, name, age, balance) VALUES (5, "Felipe", 35, 15000)')
+
 students.commit()
 students.close()
 
