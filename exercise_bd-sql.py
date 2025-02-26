@@ -33,6 +33,19 @@ cursor = students.cursor()
 # count_records = cursor.fetchone()[0]
     # print(f"Total de alunos: {count_records}")
 
+# 4)
+# a)
+# cursor.execute('UPDATE students SET age = 27 WHERE id = 4')
+# age_update_records = cursor.execute('SELECT age FROM students WHERE id = 4')
+# for students in age_update_records:
+    # print(students)
+
+# b)
+# cursor.execute('DELETE FROM students WHERE id = 5')
+# id_delete_records = cursor.execute('SELECT * FROM students')
+# for students in id_delete_records:
+    # print(students)
+
 students.commit()
 students.close()
 
