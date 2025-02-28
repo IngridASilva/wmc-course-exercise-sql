@@ -1,5 +1,5 @@
 import sqlite3
-students = sqlite3.connect('students_database.db')
+students = sqlite3.connect('exercise_database.db')
 cursor = students.cursor()
 
 # 1)
